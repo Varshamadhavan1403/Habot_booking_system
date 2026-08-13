@@ -96,9 +96,6 @@ class BookingAPITest(APITestCase):
         }
 
         response = self.client.post("/api/v1/parents/", payload, format="json")
-
-        print(response.data)
-
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
     def test_create_lsa(self):
